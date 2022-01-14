@@ -34,11 +34,11 @@ class Guzik:
         return self.y_ekranu
     
     def get_wiersz_planszy(self):
-        """zwraca wiersz planszy na którym jest guzik"""
+        """zwraca wiersz planszy na ktÃ³rym jest guzik"""
         return self.wiersz_planszy
     
     def get_kolumna_planszy(self):
-        """zwraca kolumnê planszy na której jest guzik"""
+        """zwraca kolumnÄ™ planszy na ktÃ³rej jest guzik"""
         return self.kolumna_planszy  
 
     def pobierz_bok_1(self):
@@ -50,11 +50,11 @@ class Guzik:
         return self.bok_2
         
     def get_podswietlony(self):
-        """zwraca informacjê o tym, czy guzik jest aktualnie podœwietlony"""
+        """zwraca informacjÄ™ o tym, czy guzik jest aktualnie podÅ›wietlony"""
         return self.podswietlony
      
     def sprawdz_czy_najechany(self, mouse_width, mouse_height):
-        """sprwadza czy guzik jest aktualnie najechany myszk¹"""
+        """sprwadza czy guzik jest aktualnie najechany myszkÄ…"""
         #pomocnicza lambda
         dodawanie = lambda x, y : x + y
         
@@ -73,7 +73,7 @@ class Guzik:
         
         
     def podswietl_button(self, display):
-        """podœwietla guzik"""
+        """podÅ›wietla guzik"""
         self.colour_aktualny = kolory.color_light
         self.draw_button(display)
             
@@ -100,7 +100,7 @@ class Guzik:
             
 
 class Guzik_planszy(Guzik):
-    """guzik planszy, a wiêc pole planszy"""
+    """guzik planszy, a wiÄ™c pole planszy"""
     def __init__(self, x, y, colour, dlugosc_boku1, dlugosc_boku2, wiersz_planszy):
         super().__init__(x, y, colour, dlugosc_boku1, dlugosc_boku2)
         
@@ -114,7 +114,7 @@ class Guzik_planszy(Guzik):
         #set
         
     def ustaw_czy_pusty(self, value, pionek):
-        """ustawia, czy pole jest puste, czy zajête przez dany pionek"""
+        """ustawia, czy pole jest puste, czy zajÄ™te przez dany pionek"""
         self.pusty = value
         self.pionek = pionek
         
@@ -122,15 +122,15 @@ class Guzik_planszy(Guzik):
         # get
         
     def get_pionek(self):
-        """zwraca pionek znajduj¹cy siê na guziku"""
+        """zwraca pionek znajdujÄ…cy siÄ™ na guziku"""
         return self.pionek
     
     def get_pusty(self):
-        """zwraca informacjê, czy na polu stoi pionek, czy nie"""
+        """zwraca informacjÄ™, czy na polu stoi pionek, czy nie"""
         return self.pusty
     
     
-    # ewentualne metody, gdyby by³y potrzebne do reprezentacji w konsoli
+    # ewentualne metody, gdyby byÅ‚y potrzebne do reprezentacji w konsoli
     def __str__(self): 
         return 'obiekt button, wiersz_planszy = {}, kolumna_planszy={}'.format(self.wiersz_planszy, self.kolumna_planszy)
     
@@ -141,7 +141,7 @@ class Guzik_planszy(Guzik):
     
     #nadpisujemy metode z klasy bazowej
     def podswietl_button(self, display):
-        """podœwietla guzik"""
+        """podÅ›wietla guzik"""
         Guzik.podswietl_button(self, display)
             
         #ustawiamy pionek
@@ -252,7 +252,13 @@ class okey(Guzik):
     def draw_okey_button(self, display):
         """maluje guzik okey"""
         Guzik.draw_button(self, display)
-        display.wstaw_napis_na_guziku(self.napis, self.x_ekranu, self.y_ekranu, kolory.color_black)    
-
-
-
+        display.wstaw_napis_na_guziku(self.napis, self.x_ekranu, self.y_ekranu, kolory.color_black)        
+        
+     
+        
+        
+        
+        
+    
+    
+    
